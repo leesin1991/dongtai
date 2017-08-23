@@ -112,40 +112,6 @@ function checkBackLogin()
 
 
 /**
- * 保存post(根据是否有$_POST["id"]来判断执行插入或更新操作)
- * @param string $table
- *
- */
-function savePost($table)
-{
-    if(empty($_POST["id"])){
-        //新增数据并返回主键值
-        $rs=Db::name($table)->insertGetId($_POST);
-    }
-    else{
-        $rs=Db::name($table)->where('id',$_POST["id"])->update($_POST);
-    }
-    return $rs;
-}
-
-/**
- * 保存(根据是否有$_POST["id"]来判断执行插入或更新操作)
- * @param string $table
- *
- */
-function saveData($table,$data)
-{
-    if(intval($data["id"]) < 1){
-        //新增数据并返回主键值
-        $rs=Db::name($table)->insertGetId($data);
-    }
-    else{
-        $rs=Db::name($table)->where(['id' => $data['id']])->update($data);
-    }
-    return $rs;
-}
-
-/**
  * 获取某一字段的值
  * @param string $table
  * @param array $where

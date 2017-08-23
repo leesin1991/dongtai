@@ -73,7 +73,7 @@
                     $form.find('.callout-danger').show().find('p').html(result.errmsg);
                 }
                 $form.find('button[type="submit"]').prop('disabled', false);
-            });
+            },'json');
             return false;
         });
     });

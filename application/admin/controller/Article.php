@@ -7,28 +7,49 @@ class Article extends Common
 {
     public function index()
     {
-        return view('article');
+        $where['is_del'] = 0;
+        $data = Db::name('article')->where($where)->select();
+        $this->assign('data',$data);
+        return view();
     }
 
     public function editArticle()
     {
+        $where['id'] = input('post.id');
+        $where['is_del'] = 0;
+        $data = Db::name('article')->where($where)->find();
+        $this->assign('data',$data);
         return view();
     }
 
 
     public function doEditArticle()
     {
-        return view();
+        $post = input('post.');
+        $rs = $this->saveData('article',$post);
+        if ( $rs ){
+            $return = ['errno' => 0, 'errmsg' => ''];
+        } else{
+            $return = ['errno' => 1, 'errmsg' => '保存失败'];
+        }
+        ajaxReturn($return);
     }
 
 
     public function category()
     {
+        $where['is_del'] = 0;
+        $data = Db::name('article_category')->where($where)->select();
+        $this->assign('data',$data);
         return view();
     }
 
     public function editCategory()
     {
+        $where['id'] = input('post.id');
+        $where['is_del'] = 0;
+        $data = Db::name('article_category')->where($where)->find();
+        $this->assign('data',$data);
         return view();
     }
 
@@ -36,10 +57,7 @@ class Article extends Common
     public function doEditCategory()
     {
         $post = input('post.');
-//        $post = Request::instance()->post();
-//        print_r($post);die;
-        $rs = saveData('article_category',$post);
-//        $rs = Db::name('article_category')->insertGetId($post);
+        $rs = $this->saveData('article_category',$post);
         if ( $rs ){
             $return = ['errno' => 0, 'errmsg' => ''];
         } else{

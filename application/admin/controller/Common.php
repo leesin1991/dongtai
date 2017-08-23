@@ -20,7 +20,6 @@ class Common extends Controller
         if(empty($data["id"])){
             //新增数据并返回主键值
             $rs=Db::name($table)->insertGetId($data);
-            print_r($rs);die;
         }
         else{
             $rs=Db::name($table)->where('id',$_POST["id"])->update($data);
