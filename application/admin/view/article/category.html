@@ -1,0 +1,58 @@
+{include file="base/header"/}
+{include file="base/menu"/}
+<!-- Content Header (Page header) -->
+<div class="content-wrapper">
+  <section class="content-header">
+    <h1>
+      文章分类
+      <small> category</small>
+    </h1>
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li class="active">使用说明</li>
+      <li >文章分类</li>
+    </ol>
+  </section>
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="nav-tabs-custom">
+          <!-- tab 标签 -->
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="javascript:;" data-toggle="tab">文章分类列表</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="bicycle">
+              <div class="form-group">
+                <a href="{:url('article/editCategory')}" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i>&nbsp;新增</a>
+              </div>
+              <form id="table_form" class="table_form" method="post">
+                <table class="table table-bordered table-hover dataTable" role="grid">
+                  <thead>
+                  <tr>
+                    <th>分类名称</th>
+                    <th>排序</th>
+                    <th style="min-width:130px;">操作</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+
+
+                  </tbody>
+                </table>
+              </form>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.content -->
+</div>
+{include file="base/footer"/}

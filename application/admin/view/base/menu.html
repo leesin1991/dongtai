@@ -23,23 +23,6 @@
       <ul class="sidebar-menu">
         <li class="header">主菜单</li>
 
-        <li class="treeview">
-          <a href="/admin/index/bike">
-            <i class="fa fa-bicycle"></i><span>单车管理</span>
-            <span class="pull-right-container">
-            
-            </span>
-          </a>
-        </li>
-
-        <li class="treeview">
-          <a href="/region">
-            <i class="fa fa-map-marker"></i><span>区域管理</span>
-            <span class="pull-right-container">
-            
-            </span>
-          </a>
-        </li>
 
         <li class="treeview">
           <a href="#">
@@ -50,9 +33,6 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="/operation/fault"><i class="fa fa-circle-o"></i> 故障管理</a></li>
-            <li><a href="/operation/violation"><i class="fa fa-circle-o"></i> 违规停放</a></li>
-            <li><a href="/operation/feedback"><i class="fa fa-circle-o"></i> 客户反馈</a></li>
-            <li><a href="/operation/coupon"><i class="fa fa-circle-o"></i> 优惠券管理</a></li>
           </ul>
         </li>
 
@@ -65,25 +45,19 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="/user/list"><i class="fa fa-circle-o"></i> 用户列表</a></li>
-            <li><a href="/user/recharge"><i class="fa fa-circle-o"></i> 充值记录</a></li>
-            <li><a href="/user/withdraw"><i class="fa fa-circle-o"></i> 提现申请</a></li>
-            <li><a href="/user/order"><i class="fa fa-circle-o"></i> 消费记录</a></li>
-            <li><a href="/user/credit"><i class="fa fa-circle-o"></i> 信用记录</a></li>
-            <li><a href="/user/identity"><i class="fa fa-circle-o"></i> 实名验证记录</a></li>
-            <li><a href="/user/message"><i class="fa fa-circle-o"></i> 系统消息</a></li>
           </ul>
         </li>
 
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-book"></i> <span>使用说明管理</span>
+            <i class="fa fa-book"></i> <span>文章管理</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="/article/list"><i class="fa fa-circle-o"></i> 使用说明分类型</a></li>
-            <li><a href="//category/list"><i class="fa fa-circle-o"></i> 使用说明文档管理</a></li>
+            <li><a href="{:url('article/category')}"><i class="fa fa-circle-o"></i> 文章类型</a></li>
+            <li><a href="{:url('article/index')}"><i class="fa fa-circle-o"></i> 文章列表</a></li>
           </ul>
         </li>
 
@@ -97,9 +71,6 @@
           <ul class="treeview-menu">
             <li><a href="/system/admin'"><i class="fa fa-circle-o"></i> 管理员管理</a></li>
             <li><a href="/system/role"><i class="fa fa-circle-o"></i> 角色管理</a></li>
-            <li><a href="/system/operator"><i class="fa fa-circle-o"></i> 运营设置</a></li>
-            <li><a href="/system/version"><i class="fa fa-circle-o"></i> 版本管理</a></li>
-            <li><a href="/system/log"><i class="fa fa-circle-o"></i> 操作日志</a></li>
           </ul>
         </li>
 
