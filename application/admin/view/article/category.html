@@ -37,15 +37,22 @@
                   </tr>
                   </thead>
                   <tbody>
-
-
+{volist name="data" id="vo"}
+                    <tr>
+                        <td>{$vo.title}</td>       
+                        <td>{$vo.sort}</td> 
+                        <td>
+                            <a href="{:url('article/editCategory')}?id={$vo.id}" class="btn btn-xs  btn-primary"><i class="fa fa-fw fa-edit"></i>编辑</a>
+                        </td>
+                    </tr>
+{/volist}
                   </tbody>
                 </table>
               </form>
             </div>
             <div class="row">
               <div class="col-xs-12">
-
+                {$data->render()}
               </div>
             </div>
           </div>

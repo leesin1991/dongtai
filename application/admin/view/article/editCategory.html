@@ -33,14 +33,14 @@
                                         <h4>保存失败</h4>
                                         <p></p>
                                     </div>
-                                    <input type="hidden" class="form-control" name="id" value="">
+                                    <input type="hidden" class="form-control" name="id" value="{$data.id}">
                                     <div class="form-group">
                                         <label for="name">文章分类名称</label><br/>
-                                        <input type="text" class="form-control" name="title" placeholder="最长20个字符" value="" required="required">
+                                        <input type="text" class="form-control" name="title" placeholder="最长20个字符" value="{$data.title}" required="required">
                                     </div>
                                     <div class="form-group">
                                         <label for="sort">排序值</label><br/>
-                                        <input type="text" class="form-control" name="sort" value="">
+                                        <input type="text" class="form-control" name="sort" value="{$data.sort}">
                                     </div>
                                 </div>
                                 <!-- /.box-body -->
