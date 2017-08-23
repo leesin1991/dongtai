@@ -17,12 +17,11 @@ class Common extends Controller
 
     public function saveData($table,$data)
     {
-        if(empty($data["id"])){
-            //新增数据并返回主键值
-            $rs=Db::name($table)->insertGetId($data);
-        }
-        else{
-            $rs=Db::name($table)->where('id',$_POST["id"])->update($data);
+        $id = intval($data['id']);
+        if($id < 1){
+            $rs = Db::name($table)->insertGetId($data);
+        }else{
+            $rs = Db::name($table)->where(['id' => $id])->update($data);
         }
         return $rs;
     }
