@@ -14,6 +14,6 @@ class Index extends Common
     public function logout()
     {
         Session::clear('think');
-        $this->error('您尚未登录系统',url('login/index'));
+        header("Location: " . url('login/index'));
     }
 }

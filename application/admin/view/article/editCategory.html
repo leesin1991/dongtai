@@ -64,7 +64,6 @@
         $form.submit(function(){
             var url = "{:url('article/doEditCategory')}";
             var data = $form.serializeArray();
-
             $form.find('button[type="submit"]').prop('disabled', true);
             $.post(url, data, function(result){
                 if (result.errno == 0) {

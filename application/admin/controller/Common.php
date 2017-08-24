@@ -11,7 +11,7 @@ class Common extends Controller
     public function _initialize()
     {
          if(!session('login_admin')){
-            $this->error('您尚未登录系统',url('login/index'));
+             header("Location: " . url('login/index'));
          }
     }
 

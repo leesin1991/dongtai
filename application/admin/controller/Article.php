@@ -9,7 +9,8 @@ class Article extends Common
     public function index()
     {
         $where['is_del'] = 0;
-        $data = Db::name('article')->where($where)->paginate();
+        $order = 'sort Asc';
+        $data = Db::name('article')->where($where)->order($order)->paginate();
         foreach ($data as $key => $value) {
             $value['catename'] = Db::name('article_category')->where(['id'=>$value['category_id']])->value('title');
             $data[$key] = $value;
@@ -52,7 +53,8 @@ class Article extends Common
     public function category()
     {
         $where['is_del'] = 0;
-        $data = Db::name('article_category')->where($where)->paginate();
+        $order = 'sort Asc';
+        $data = Db::name('article_category')->where($where)->order($order)->paginate();
         $this->assign('data',$data);
         return view();
     }
